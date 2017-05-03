@@ -15,5 +15,11 @@
 
 </ion-menu>
 
+<ion-tabs>
+  <ion-tab [root]="tab1Root"></ion-tab>
+  <ion-tab [root]="tab2Root"></ion-tab>
+  <ion-tab [root]="tab3Root"></ion-tab>
+</ion-tabs>
+
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
