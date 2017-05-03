@@ -1,9 +1,9 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>UCIRO Health and Safety</ion-title>
+    <ion-title>UCIRO Health and Safety </ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -15,4 +15,29 @@
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content> -->
+
+<ion-header>
+  <ion-navbar color="positive">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Awesome List
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addSong()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let song of songs | async" (click)="showOptions(song.$key, song.title)">
+      {{song.title}}
+    </ion-item>
+  </ion-list>
 </ion-content>

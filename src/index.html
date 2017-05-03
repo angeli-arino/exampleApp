@@ -10,7 +10,7 @@
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
- 
+
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
@@ -30,6 +30,19 @@
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCkCm075rxqYzbFRah00CMt6lk4QbiarOU",
+      authDomain: "uciro-health-and-safety.firebaseapp.com",
+      databaseURL: "https://uciro-health-and-safety.firebaseio.com",
+      projectId: "uciro-health-and-safety",
+      storageBucket: "uciro-health-and-safety.appspot.com",
+      messagingSenderId: "740177406991"
+    };
+    firebase.initializeApp(config);
+  </script>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
